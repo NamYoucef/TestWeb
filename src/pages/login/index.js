@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import useFetch from "../../api/useFetch";
-import { useLocation } from "react-router";
-import { Navigate, Outlet, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 import "./style.css";
 
