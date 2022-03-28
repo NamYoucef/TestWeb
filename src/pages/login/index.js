@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import useFetch from "../../api/useFetch";
+import { useLocation } from "react-router";
+import { Navigate, Outlet, useNavigate } from "react-router-dom";
+
 import "./style.css";
-import { Redirect } from "react-router-dom";
+
 function Login() {
   const [inputValue, setInputvalue] = useState("");
   const [email, setEmail] = useState("");
   const shouldRedirect = true;
   const { donnee, isPending } = useFetch("http://localhost:4000/");
-  console.log("ResultDataBack", donnee[0].email);
+  const navigate = useNavigate();
   function loginFunction() {
     if (inputValue == donnee[0].email) {
       console.log("OK");
-      <Redirect to="/todolist" />;
+      navigate("/todolist");
     }
   }
   const todos = [];
