@@ -6,7 +6,6 @@ import "./style.css";
 
 function Login() {
   const [inputValue, setInputvalue] = useState("");
-  const [email, setEmail] = useState("");
   const shouldRedirect = true;
   const { donnee, isPending } = useFetch("https://backtest01.herokuapp.com/");
   const navigate = useNavigate();
