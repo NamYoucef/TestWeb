@@ -12,7 +12,7 @@ function Login() {
   const { donnee, isPending } = useFetch("https://backtest01.herokuapp.com/");
   const navigate = useNavigate();
   function loginFunction() {
-    if (inputValue == donnee[0].email) {
+    if (inputValue === donnee[0].email) {
       console.log("OK");
       navigate("/todolist");
     }
