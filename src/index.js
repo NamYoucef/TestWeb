@@ -4,7 +4,6 @@ import "./index.css";
 import Login from "./pages/login/index";
 import Home from "./pages/home/index";
 
-import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 ReactDOM.render(
