@@ -1,26 +1,22 @@
 import React, { useState } from "react";
 import useFetch from "../../api/useFetch";
-import { Navigate } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 function Login() {
   const [inputValue, setInputvalue] = useState("");
-  const shouldRedirect = true;
-  const { donnee, isPending } = useFetch("https://backtest01.herokuapp.com/");
+  const { donnee, isPending } = useFetch("http://localhost:4000/");
   const navigate = useNavigate();
   function loginFunction() {
     if (inputValue === donnee[0].email) {
-      console.log("OK");
       navigate("/todolist");
     }
   }
-  const todos = [];
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = { inputValue };
     console.log(user);
-    fetch("https://backtest01.herokuapp.com/", {
+    fetch("http://localhost:4000/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
