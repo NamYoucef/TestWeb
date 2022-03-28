@@ -1,7 +1,7 @@
 import "./style.css";
-import { UnorderedListOutlined, CheckOutlined } from "@ant-design/icons";
+import { CheckOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
-import { List, Avatar } from "antd";
+import { List } from "antd";
 function Home() {
   const data = [
     {
