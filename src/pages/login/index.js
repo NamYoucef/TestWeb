@@ -5,7 +5,7 @@ import "./style.css";
 
 function Login() {
   const [inputValue, setInputvalue] = useState("");
-  const { donnee, isPending } = useFetch("http://localhost:4000/");
+  const { donnee, isPending } = useFetch("https://backtest01.herokuapp.com/");
   const navigate = useNavigate();
   function loginFunction() {
     if (inputValue === donnee[0].email) {
@@ -16,7 +16,7 @@ function Login() {
     e.preventDefault();
     const user = { inputValue };
     console.log(user);
-    fetch("http://localhost:4000/", {
+    fetch("https://backtest01.herokuapp.com/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
